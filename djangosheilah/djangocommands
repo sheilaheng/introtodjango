@@ -1,0 +1,4 @@
+python manage.py runserver - to run app in browser
+python manage.py makemigration - to prepare migration file
+python manage.py migrate - to effect changes on migration file
+python manage.py createsuperuser - create super admin
