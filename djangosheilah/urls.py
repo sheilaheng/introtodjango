@@ -23,5 +23,8 @@ urlpatterns = [
     path('about/', views.aboutpage, name='about'),
     path('services/', views.servicespge, name='services'),
     path('projects/', views.projectspage, name='projects'),
-    path('blog/', views.blogspage, name='blog')
+    path('blog/', views.blogspage, name='blog'),
+    path('', views.indexpage, name="index"),
+    path('signup/', views.signup, name="signup")
+
 ]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+
+    <style>
+        body{
+            background-color: #8bb9fe;
+        }
+    </style>
+</head>
+<body>
+<div class="col-sm-6">
+    <div class="input-group">
+  <span class="input-group-text">First name</span>
+  <input type="text" aria-label="First name" class="form-control"> <br>
+        <span class="input-group-text">Last name</span>
+  <input type="text" aria-label="Last name" class="form-control">
+</div>
+    <br>
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+     <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Phone number</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your phone number with anyone else.</div>
+  </div>
+
+    <select class="form-select" aria-label="Default select example">
+  <option selected>Open to select gender</option>
+  <option value="1">Male</option>
+  <option value="2">Female</option>
+</select> <br>
+<button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+</div>
+
+
+</body>
+</html>
