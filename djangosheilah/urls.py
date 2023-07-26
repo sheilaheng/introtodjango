@@ -25,6 +25,8 @@ urlpatterns = [
     path('projects/', views.projectspage, name='projects'),
     path('blog/', views.blogspage, name='blog'),
     path('', views.indexpage, name="index"),
-    path('signup/', views.signup, name="signup")
+    path('signup/', views.blogspage, name='signup'),
+    path('insert', views.insertdata, name= 'insertdata')
+
 
 ]
