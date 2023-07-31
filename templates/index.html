@@ -31,12 +31,24 @@
                         <input type="text" class="form-control" placeholder="Name" name="name" required>
                     </div>
 
+                     <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Enter phone number" name="phone" required>
+                    </div>
+
                     <div class="form-group">
                         <input type="email" class="form-control  mt-2" placeholder="Email" name="email" required>
                     </div>
 
                     <div class="form-group">
                         <input type="number" class="form-control  mt-2" placeholder="Age" name="age" required>
+
+                    </div>
+
+                     <div class="form-group">
+                        <input type="text" class="form-control  mt-2" placeholder="Country" name="country" required>
+
+                    </div> <div class="form-group">
+                        <input type="text" class="form-control  mt-2" placeholder="City" name="city" required>
 
                     </div>
 
@@ -59,13 +71,15 @@
                 </form>
             </div>
 
-
-            <table>
+              <table>
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Age</th>
                     <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Country</th>
+                    <th>City</th>
                     <th>Action</th>
                 </tr>
 
@@ -75,16 +89,23 @@
                     <th>{{ d.name }}</th>
                     <th>{{ d.email }}</th>
                     <th>{{ d.age }}</th>
-                    <th>{{ d.gender }}</th>
+                    <th>{{ d.gender}}</th>
+                    <th>{{ d.phone }}</th>
+                    <th>{{ d.country }}</th>
+                    <th>{{ d.city }}</th>
                     <th>
-                        <button>
-                            <a href="/delete/{{ d.id }}">Delete</a>
 
-                        </button>
-                        <button>
-                              <a href="/update/{{ d.id }}">Update</a>
+                            <button type="button" class="btn btn-danger">
 
+                                   <a href="/delete/{{ d.id }}">Delete</a>
+
+                            </button>
+                        <button type="button" class="btn btn-info">
+
+                             <a href="/update/{{ d.id }}">Update</a>
                         </button>
+
+
 
                     </th>
                 </tr>

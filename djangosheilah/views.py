@@ -7,9 +7,13 @@ def insertdata(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         age = request.POST.get('age')
+        phone = request.POST.get('phone')
         gender = request.POST.get('gender')
+        country = request.POST.get('country')
+        city = request.POST.get('city')
 
-        query = People.objects.create(name=name, email=email, age=age, gender=gender)
+        query = People.objects.create(name=name, email=email, age=age, phone=phone, gender=gender, country=country,
+                                      city=city)
         query.save()
         return redirect("/")
     return render(request, "index.html")
@@ -32,12 +36,18 @@ def updateData(request, id):
         email = request.POST.get('email')
         age = request.POST.get('age')
         gender = request.POST.get('gender')
+        phone = request.POST.get('phone')
+        country = request.POST.get('country')
+        city = request.POST.get('city')
 
         edit_data = People.objects.get(id=id)
         edit_data.name = name
         edit_data.email = email
         edit_data.age = age
         edit_data.gender = gender
+        edit_data.phone = phone
+        edit_data.country = country
+        edit_data.city = city
         edit_data.save()
 
         return redirect("/")

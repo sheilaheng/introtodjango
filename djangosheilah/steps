@@ -1,0 +1,12 @@
+#When adding a new field in a code
+1. Edit html file
+2. Edit model and add field
+3. Makemigrations > migrate
+4. Go to views and add field to the query
+5. To display new data to html file and add new field to your table
+
+
+###Add two field
+    country
+    city
+

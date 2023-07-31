@@ -25,9 +25,14 @@
  <form action="/update/{{ dta.id }}" method="post">
  {% csrf_token %}
 
-<div class="form-group">
- <input type="text" value="{{ dta.name }}" class="form-control" placeholder="Name" name="name" required>
- </div>
+
+     <div class="form-group">
+                        <input type="text" value="{{ dta.name }}" class="form-control" placeholder="Name" name="name" required>
+                    </div>
+
+     <div class="form-group">
+                        <input type="number" value="{{ dta.phone }}" class="form-control" placeholder="Enter phone number" name="phone" required>
+                    </div>
 
  <div class="form-group">
  <input type="email" value="{{ dta.email }}" class="form-control mt-2" placeholder="Email" name="email" required>
@@ -37,6 +42,15 @@
  <input type="number" value="{{ dta.age }}" class="form-control mt-2" placeholder="Age" name="age" required>
 
  </div>
+
+      <div class="form-group">
+                        <input type="text" value="{{ dta.country }}" class="form-control  mt-2" placeholder="Country" name="country" required>
+
+                    </div>
+     <div class="form-group">
+                        <input type="text" value="{{ dta.city }}" class="form-control  mt-2" placeholder="City" name="city" required>
+
+                    </div>
 
 
  <div class="form-group mt-2">
@@ -49,49 +63,52 @@
 
  <div class="d-grid gap-2">
 
- <button class="btn btn-success mt-2" type="submit">Insert</button>
+ <button class="btn btn-success mt-2" type="submit">Update</button>
  </div>
-
-
 
  </form>
- </div>
 
 
- <table>
- <tr>
- <th>Name</th>
- <th>Email</th>
- <th>Age</th>
- <th>Gender</th>
- <th>Action</th>
- </tr>
+              <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for d in data %}
+
+                 <tr>
+                    <th>{{ d.name }}</th>
+                    <th>{{ d.email }}</th>
+                    <th>{{ d.age }}</th>
+                    <th>{{ d.gender}}</th>
+                    <th>{{ d.phone }}</th>
+                    <th>{{ d.country }}</th>
+                    <th>{{ d.city }}</th>
+                    <th>
+
+                            <button type="button" class="btn btn-danger">
+
+                                   <a href="/delete/{{ d.id }}">Delete</a>
+
+                            </button>
+                        <button type="button" class="btn btn-info">
+
+                             <a href="/update/{{ d.id }}">Update</a>
+                        </button>
 
 
- {% for d in data %}
-<tr>
- <th>{{ d.name }}</th>
- <th>{{ d.email }}</th>
- <th>{{ d.age }}</th>
- <th>{{ d.gender }}</th>
- <th>
- <button>
- <a href="/delete/{{ d.id }}"> Delete </a>
 
- </button>
-
- <button>Update</button>
-
- </th>
- </tr>
- {% endfor %}
-
-
-
-</table>
-
-
-
+                    </th>
+                </tr>
+                {% endfor %}
+            </table>
 
  </div>
  </div>
